@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Página 1</h1>
+	<form action="">
+		<input type="text" id="numero1"  placeholder="Número 1">
+		<input type="text" id="numero2"  placeholder="Número 2">
+		<input type="button" value="Sumar" onclick="alert(suma());">
+	</form>
+	<form action="">
+		<input type="text" id="numero3" placeholder="Número 1">
+		<input type="text" id="numero4" placeholder="Número 2">
+		<input type="button" value="Restar" onclick="alert(resta());">
+	</form>
+	<form action="">
+		<input type="text" id="numero5" placeholder="Número 1">
+		<input type="text" id="numero6" placeholder="Número 2">
+		<input type="button" value="Multiplicar" onclick="alert(mul());">
+	</form>
+	<form action="">
+		<input type="text" id="numero7" placeholder="Número 1">
+		<input type="text" id="numero8" placeholder="Número 2">
+		<input type="button" value="Dividir" onclick="alert(div());">
+	</form>
+	<form action="">
+		<input type="button" value="Fecha y hora actual" onclick="alert(hora());">
+	</form>
+	<form action="">
+		<input type="text" id="numero9" placeholder="Número">
+		<input type="button" value="Suma de todos los números hasta este" onclick="alert(sumah());">
+	</form>
+	<form action="">
+		<input type="text" id="numero10" placeholder="Número 1">
+		<input type="text" id="numero11" placeholder="Número 2">
+		<input type="button" value="Mayor" onclick="alert(may());">
+		<input type="button" value="Menor" onclick="alert(men());">
+	</form>
+
+	
+
+	<script>
+		var	suma = function(numero1,numero2){
+			var numero1 = parseFloat(document.getElementById("numero1").value);
+			var numero2 = parseFloat(document.getElementById("numero2").value);
+			var resultado = numero1 + numero2;
+			var dosdec=resultado.toFixed(2);
+			return	dosdec;
+		}
+		var	resta = function(numero1,numero2){
+			var numero1 = parseFloat(document.getElementById("numero3").value);
+			var numero2 = parseFloat(document.getElementById("numero4").value);
+			var resultado = numero1 - numero2;
+			var dosdec=resultado.toFixed(2);
+			return	dosdec;
+		}
+		var	mul = function(numero1,numero2){
+			var numero1 = parseFloat(document.getElementById("numero5").value);
+			var numero2 = parseFloat(document.getElementById("numero6").value);
+			var resultado = numero1 * numero2;
+			var dosdec=resultado.toFixed(2);
+			return	dosdec;
+		}
+		var	div = function(numero1,numero2){
+			
+			
+				var numero1 = parseFloat(document.getElementById("numero7").value);
+				var numero2 = parseFloat(document.getElementById("numero8").value);
+				var resultado = numero1 / numero2;
+				var dosdec=resultado.toFixed(2);
+				return	dosdec;		
+		}
+		var hora = function(){
+			var time = new Date();
+			return time;
+		}
+
+		var	sumah = function(numero1){
+				var i=0;
+				var suma=0;
+				var numero1 = parseFloat(document.getElementById("numero9").value);
+				do{
+					suma+=i;
+					i++;
+				}while (i<=numero1)
+			
+				return	suma;		
+		}
+
+		var	may = function(numero1,numero2){
+			
+			
+				var numero1 = parseFloat(document.getElementById("numero10").value);
+				var numero2 = parseFloat(document.getElementById("numero11").value);
+				if(numero1!=numero2){
+					if(numero1<numero2){
+						resultado = numero2;
+					}else{
+					resultado = numero1;
+					}
+				}else{
+					resultado = "Los números son iguales";
+				}
+
+				return	resultado;		
+		}
+
+		var	men = function(numero1,numero2){
+			
+			
+				var numero1 = parseFloat(document.getElementById("numero10").value);
+				var numero2 = parseFloat(document.getElementById("numero11").value);
+				if(numero1!=numero2){
+					if(numero1>numero2){
+						resultado = numero2;
+					}else{
+					resultado = numero1;
+					}
+				}else{
+					resultado = "Los numeros son iguales";
+				}
+
+				return	resultado;		
+		}
+
+
+
+	</script>
+	<a href="index.html">Página Principal</a>
+</body>
+</html>

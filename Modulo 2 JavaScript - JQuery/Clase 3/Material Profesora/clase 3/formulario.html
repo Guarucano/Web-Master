@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><title>Formulario con Javascript</title>
+	<meta charset='UTF-8'>
+	<!-- <meta charset='ISO-8859-1'> -->
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+	<script src="js/funciones.js"></script>
+
+</head>
+<!-- <body onload="funalcargar()"> -->
+<body >
+	<div id="caja_principal">
+		<header id="cabecera">
+			<div id="caja1">
+				<script>
+						document.write ( "<br>Trabajando Formulario<br> " );
+					</script>			
+			</div>
+		</header>
+		
+		<script>
+			document.write(enlaces);
+		</script>
+		
+		<section id="area_principal">
+			<div id="caja2">
+				<article>
+					<header>
+						<h1 id="TituloForm" onmouseover="funmouseover(this)" onmouseout="funmouseout(this)">Formulario con Javascript</h1>
+						<script>
+							document.getElementById("TituloForm").addEventListener("click", funclicktitulo);
+						</script>
+					</header>
+					<fieldset>
+						<form name='formjs' method='get' action='' onsubmit='return validarform();' >
+							<br>
+							Nombre : <input type='text' name='txtnombre' onfocus='funfocus(this)' onkeypress='funtecla(this)'> 
+							<span id='errorNom' class='error'>Campo Requerido</span>
+
+							<br><br>
+							Apellido : <input type='text' name='txtapellido'>
+							<span id='errorApe' class='error'>Campo Requerido</span>
+							<br><br>
+							Usuario : <input type='text' name='txtusuario'>
+							<span id='errorUser' class='error'>Campo Requerido</span>
+							<br><br>
+							Clave : <input type='password' name='txtclave1'>
+							<span id='errorClav1' class='error'>Campo Requerido</span>
+							<br><br>
+							Repetir Clave : <input type='password' name='txtclave2'>
+							<span id='errorClav2' class='error'>Campo Requerido</span>
+							<br><br>
+							Sexo : <span id='errorSexo' class='error'>Campo Requerido</span>
+							<br>
+							<input type="radio" name="sexo" value="M">Masculino
+							<br>
+							<input type="radio" name="sexo" value="F">Femenino
+							<br><br>
+							Estado : <span id='errorEst' class='error'>Campo Requerido</span>
+							<br>
+							<select name='estado'>
+							  <option value=''></option>
+							  <option value='Falcon'>Falcon</option>
+							  <option value='Merida'>Merida</option>
+							  <option value='Tachira'>Tachira</option>
+							  <option value='Trujillo'>Trujillo</option>
+							  <option value='Zulia'>Zulia</option>
+							</select>
+							
+							<br><br>
+							<input type='submit' value='Enviar'>
+						</form>
+						<br><br>
+					</fieldset>
+				<script>
+					
+				</script>
+				</article>
+
+				<article>	
+				</article>
+			</div>
+		</section>
+		<footer id="pie">
+				Copyright &copy; 2015
+		</footer>
+	<div>
+</body>
+</html>

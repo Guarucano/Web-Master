@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Página 2</h1>
+	<form action="">
+		<input type="text" id="nombre1" placeholder="Nombre">
+		
+		<input type="button" value="Cantidad de carácteres" onclick="alert(long());">
+	</form>
+	<form action="">
+		<input type="text" id="ape1" placeholder="Apellido">
+		
+		<input type="button" value="Cantidad de carácteres" onclick="alert(longape());">
+	</form>
+	<form action="">
+		<input type="button" value="Suma de nombre y apellido" onclick="alert(suma());">
+	</form>
+
+	<form action="">
+		<input type="text" id="nombre" placeholder="Nombre">
+		
+		<input type="button" value="Mayúscula" onclick="alert(mayus());">
+	</form>
+	<form action="">
+		<input type="text" id="nombremin" placeholder="Nombre">
+		
+		<input type="button" value="Minúscula" onclick="alert(minus());">
+	</form>
+	<form action="">
+		<input type="text" id="nombrepos" placeholder="Nombre">	
+		<input type="button" value="Carácter el la posición número" onclick="alert(charat());">
+	</form>
+
+	<form action="">
+		<input type="text" id="nombreindex" placeholder="Nombre">	
+		<input type="button" value="Número de posición de la letra" onclick="alert(index());">
+	</form>
+
+	<form action="">
+		<input type="text" id="nombrelindex" placeholder="Nombre">	
+		<input type="button" value="Número de última posición de la letra" onclick="alert(lastindex());">
+	</form>
+	<form action="">
+		<input type="text" id="nombresubs" placeholder="Nombre">	
+		<input type="button" value="Cadena de texto" onclick="alert(substring());">
+	</form>
+	<form action="">
+		<input type="text" id="nombre11" placeholder="Nombre">
+		<input type="text" id="nombre2" placeholder="Segundo Nombre">
+		<input type="text" id="apellido" placeholder="Apellido">	
+		<input type="button" value="Concatenar" onclick="alert(concat());">
+	</form>
+
+
+	<script>
+		var long = function(nombre){
+			var nombre = document.getElementById("nombre1").value;
+			var longitud = nombre.length;
+			return longitud;
+		}
+		var longape = function(nombre){
+			var nombre = document.getElementById("ape1").value;
+			var longitud = nombre.length;
+			return longitud;
+		}
+		var suma = function(nombre){
+			var nombre = document.getElementById("nombre1").value;
+			var ape = document.getElementById("ape1").value;
+			var longn = nombre.length;
+			var longa = ape.length;
+			var resultado = longn+longa;
+			return resultado;
+		}
+		var mayus = function(nombre){
+			var nombre = document.getElementById("nombre").value;
+			var mayuscula = nombre.toUpperCase();
+			return mayuscula;
+		}
+
+		var minus = function(nombremin){
+			var nombre = document.getElementById("nombremin").value;
+			var mayuscula = nombre.toLowerCase();
+			return mayuscula;
+		}
+
+		var charat = function(nombrepos){
+			var nombre = document.getElementById("nombrepos").value;
+			var posicion = prompt("Posicion numero");
+			var pos = Number(posicion);
+			var resultado = nombre.charAt(pos);
+			return resultado;
+		}
+
+		var index = function(nombreindex){
+			var nombre = document.getElementById("nombreindex").value;
+			var letra = prompt("Ingrese letra");
+			var resultado = nombre.indexOf(letra);
+			return resultado;
+		}
+
+		var lastindex = function(nombrelindex){
+			var nombre = document.getElementById("nombrelindex").value;
+			var letra = prompt("Ingrese letra");
+			var resultado = nombre.lastIndexOf(letra);
+			return resultado;
+		}
+
+		var substring = function(nombresubs){
+			var nombre = document.getElementById("nombresubs").value;
+			var posicion1 = prompt("Posicion numero 1");
+			var posicion2 = prompt("Posicion numero 2");
+			var pos1 = Number(posicion1);
+			var pos2 = Number(posicion2);
+			var resultado = nombre.substring(pos1,pos2);
+			return resultado;
+		}
+		var concat = function(nombre11,nombre2,apellido){
+			var nombre11 = document.getElementById("nombre11").value;
+			var nombre2 = document.getElementById("nombre2").value;
+			var nombre3 = document.getElementById("apellido").value;
+			var res = nombre11.concat(nombre2,nombre3);
+			return res;
+		}
+
+
+
+	</script>
+
+	<a href="index.html">Página Principal</a>
+</body>
+</html>

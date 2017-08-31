@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/validaciones.js"></script>
+</head>
+<body>
+	<div id="body">
+	<p onmouseover="funmouseover(this)" onmouseout='funmouseout(this)' >Página 5</p>
+
+	
+	<form name="formjs"  action="" method="get" onsubmit="return validarform();">
+		Nombre: <input type="text"  name="txtnombre" placeholder="Ingrese Nombre" maxlength="20">
+		<span id="errorNom" class="error">Campo Requerido</span><br><br>
+		Apellido: <input type="text" name="txtapellido" placeholder="Ingrese Apellido" maxlength="20">
+		<span id="errorApe" class="error">Campo Requerido</span><br><br>
+		Usuario: <input type="text" name="txtusuario" placeholder="Ingrese Usuario" maxlength="20">
+		<span id="errorUsu" class="error">Campo Requerido</span><br><br>
+		Clave: <input type="password"  name="txtclave1" placeholder="Ingrese clave" maxlength="20">
+		<span id="errorClav1" class="error">Campo Requerido</span><br><br>
+		Repetir Clave: <input type="password" name="txtclave2" placeholder="Repita clave" maxlength="20">
+		<span id="errorClav2" class="error">Campo Requerido</span><br><br>
+		Genero : 
+							<br>
+							<input type="radio" name="sexo" value="M" >Masculino
+							<br>
+							<input type="radio" name="sexo" value="F" >Femenino
+							<br>
+							<span id="errorSexo" class="error">Campo Requerido</span>
+							<br><br>
+		<input type='submit' value='Enviar'><br>
+
+	</form><br>
+	
+
+
+
+	<a href="index.html">Página Principal</a><br>
+	</div>
+		<script>
+		
+	</script>
+</body>
+</html>

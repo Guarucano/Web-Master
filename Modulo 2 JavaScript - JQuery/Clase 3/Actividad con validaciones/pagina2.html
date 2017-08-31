@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/validaciones.js"></script>
+</head>
+<body>
+	<div id="body">
+	<p onmouseover="funmouseover(this)" onmouseout="funmouseout(this)">Página 2</p>
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombre1" placeholder="Nombre" >
+		
+		<input type="button" value="Cantidad de carácteres" onclick="alert(long());">
+	</form>
+	<br>
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="ape1" placeholder="Apellido">
+		
+		<input type="button" value="Cantidad de carácteres" onclick="alert(longape());">
+	</form><br>
+	<form action="">
+		<input type="button" value="Suma de nombre y apellido" onclick="alert(suma());">
+	</form><br>
+
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombre" placeholder="Nombre">
+		
+		<input type="button" value="Mayúscula" onclick="alert(mayus());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombremin" placeholder="Nombre">
+		
+		<input type="button" value="Minúscula" onclick="alert(minus());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombrepos" placeholder="Nombre">	
+		<input type="button" value="Carácter el la posición número" onclick="alert(charat());">
+	</form><br>
+
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombreindex" placeholder="Nombre">	
+		<input type="button" value="Número de posición de la letra" onclick="alert(index());">
+	</form><br>
+
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombrelindex" placeholder="Nombre">	
+		<input type="button" value="Número de última posición de la letra" onclick="alert(lastindex());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombresubs" placeholder="Nombre">	
+		<input type="button" value="Cadena de texto" onclick="alert(substring());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarnombre();" id="nombre11" placeholder="Nombre">
+		<input type="text" onblur="comprobarnombre();" id="nombre2" placeholder="Segundo Nombre">
+		<input type="text" onblur="comprobarnombre();" id="apellido" placeholder="Apellido">	
+		<input type="button" value="Concatenar" onclick="alert(concat());">
+	</form><br>
+
+
+	
+
+	<a href="index.html">Página Principal</a>
+	</div>
+</body>
+</html>

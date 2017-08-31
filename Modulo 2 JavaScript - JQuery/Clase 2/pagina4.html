@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Página 4</h1>
+
+	<form action="">
+		<input type="text" id="fechanac" placeholder="Año de nacimiento">
+		
+		<input type="button" value="Edad" onclick="alert(edad());">
+	</form>
+	<form action="">
+		<input type="text" id="edadd" placeholder="Edad">
+		
+		<input type="button" value="Año de nacimiento" onclick="alert(nacimiento());">
+	</form>
+
+	<script>
+		var edad = function(fechanac){
+			var anonac = document.getElementById("fechanac").value;
+			var time = new Date();
+			var year = time.getFullYear();
+			var eda = year - anonac;
+			return eda;
+			
+		}
+		var nacimiento = function(edadd){
+			var edad = document.getElementById("edadd").value;
+			var time = new Date();
+			var year = time.getFullYear();
+			var anonac = year - edad;
+			return anonac;
+			
+		}
+
+
+		
+	</script>
+
+	<a href="index.html">Página Principal</a>
+</body>
+</html>

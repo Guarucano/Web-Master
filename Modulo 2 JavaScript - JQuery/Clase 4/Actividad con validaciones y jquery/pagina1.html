@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/validaciones.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#titulo").click(function(){
+        $("#cuerpo").slideDown("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+
+$(document).ready(function(){
+    $("#titulo").mouseleave(function(){
+        alert("Pasaste el mouse por el titulo");
+    });
+});
+</script>
+<style>
+	#cuerpo{
+		display: none;
+	}
+</style>
+
+</head>
+<body>
+<div id="body">
+	<div id="titulo"><p onmouseover="funmouseover(this)" onmouseout="funmouseout(this)">Página 1</p></div>
+	<div id="cuerpo"><form action="" >
+		<input type="text" id="numero1" placeholder="Número 1" onblur="comprobarnum();">
+		<input type="text" id="numero2" placeholder="Número 2" onblur="comprobarnum();">
+		<input type="button" value="Sumar" onclick="alert(suma());">
+	</form><br>
+	<form action="">
+		<input type="text" id="numero3" placeholder="Número 1" onblur="comprobarnum();">
+		<input type="text" id="numero4" placeholder="Número 2" onblur="comprobarnum();">
+		<input type="button" value="Restar" onclick="alert(resta());">
+	</form><br>
+	<form action="">
+		<input type="text" id="numero5" placeholder="Número 1" onblur="comprobarnum();">
+		<input type="text" id="numero6" placeholder="Número 2" onblur="comprobarnum();">
+		<input type="button" value="Multiplicar" onclick="alert(mul());">
+	</form><br>
+	<form action="">
+		<input type="text" id="numero7" placeholder="Número 1" onblur="comprobarnum();">
+		<input type="text" id="numero8" placeholder="Número 2" onblur="comprobarnum();">
+		<input type="button" value="Dividir" onclick="alert(div());">
+	</form><br>
+	<form action="">
+		<input type="button" value="Fecha y hora actual" onclick="alert(hora());">
+	</form><br>
+	<form action="">
+		<input type="text" id="numero9" placeholder="Número" onblur="comprobarnum();">
+ 		<input type="button" value="Suma de todos los números hasta este" onclick="alert(sumah());">
+	</form><br>
+	<form action="">
+		<input type="text" id="numero10" placeholder="Número 1" onblur="comprobarnum();">
+		<input type="text" id="numero11" placeholder="Número 2" onblur="comprobarnum();">
+		<input type="button" value="Mayor" onclick="alert(may());">
+		<input type="button" value="Menor" onclick="alert(men());">
+	</form><br>
+
+	
+
+	
+	<a href="index.html">Página Principal</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		pagina=prompt("Introduzca número  de página a la que desea ir:\n-Página 1\n-Página 2\n-Página 3\n-Página 4\n-Página 5", "Escriba el numero");
+			if (pagina>=1 && pagina<=5){
+				if (pagina==1) {
+					window.open("pagina1.html");
+					window.close("index.html");
+				}else{
+					if (pagina==2) {
+						window.open("pagina2.html");
+						window.close("index.html");
+					}else{
+						if (pagina==3) {
+							window.open("pagina3.html");
+							window.close("index.html");
+						}else{
+							if (pagina==4) {
+								window.open("pagina4.html");
+								window.close("index.html");
+							}else{
+								if (pagina==5) {
+									window.open("pagina5.html");
+									window.close("index.html");
+								}
+							}
+						}
+					}
+				}
+			}else{
+				alert("Número invalido");
+				window.open("index.html");
+				window.close("index.html");
+			}
+	</script>
+</body>
+</html>

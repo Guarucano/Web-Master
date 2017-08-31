@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/validaciones.js"></script>
+</head>
+<body>
+	<div id="body">
+	<p onmouseover="funmouseover(this)" onmouseout="funmouseout(this)">Página 4</p>
+
+	<form action="">
+		<input type="text" onblur="comprobaredad();" maxlength="4" id="fechanac" placeholder="Año de nacimiento">
+		
+		<input type="button" value="Edad" onclick="alert(edad1());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobaredad1();" maxlength="2" id="edadd" placeholder="Edad">
+		
+		<input type="button" value="Año de nacimiento" onclick="alert(nacimiento());">
+	</form><br>
+	<form action="">
+		
+		<input type="text" onblur="comprobaredad3();" maxlength="4" id="fechanacmeses" placeholder="Año de nacimiento">
+		
+		<input type="button" value="Edad en meses" onclick="alert(edad2());">
+		
+	</form><br>
+	<form action="">
+		
+		<input type="text" onblur="comprobaredad4();" maxlength="4" id="fechanac1" placeholder="Año de nacimiento">
+		
+		<input type="button" value="Calcular mayoria de edad" onclick="mayoromenor();">
+	</form><br>
+
+
+	<a href="index.html">Página Principal</a>
+	</div>
+</body>
+</html>

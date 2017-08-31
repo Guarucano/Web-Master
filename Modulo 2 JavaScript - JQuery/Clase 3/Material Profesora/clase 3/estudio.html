@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><title>Ejemplos</title>
+	<meta charset='UTF-8'>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+	<script src="js/funciones.js"></script>
+	</head>
+<body>
+	<div id="caja_principal">
+		<header id="cabecera">
+			<div id="caja1">
+			<a>Programa con Java Script</a>
+			</div>
+		</header>
+		<section id="area_principal">
+			<div id="caja2">
+				<article id="ejemplos">
+					<header>
+						<h1>Ejemplos</h1>
+					</header>
+					<script>
+							document.write ( "<br><br><hr>Ejemplos realizados en <br><b><i>Javascript</i></b><hr>" );
+						</script>
+					<script>
+							document.write ( "<br>Trabajando con objetos<br> " );
+					</script>
+					<button onclick="ObjDatos.mostrarnombre()">Mostrar Nombre de Objeto Datos</button>
+					<br>
+					<button onclick="ObjDatos.mostrardatos()">Mostrar Objeto Datos</button>
+					<br><br>
+					<script>
+							document.write ( "<br>Trabajando con prototipos<br> " );
+					</script>
+					<button onclick="ObjEmpleado.mostrarnombre()">Mostrar Nombre de Objeto Empleado</button>
+					<br>
+					<button onclick="ObjEmpleado.mostrardatos()">Mostrar Datos Objeto Empleado</button>
+					<br><br>
+					<button onclick="ObjCliente.mostrardatos()">Mostrar Datos Objeto Cliente</button>
+					<div id="caja3">
+						<hr>
+						<a href="formulario.html">Formulario</a>
+						<hr>
+					</div>
+					<br><br>
+					<button onclick="alert('Mensaje al Usuario usando eventos en\nJavascript')">Evento Pulsa Aquí</button>
+					<p onclick="document.write('Mensaje al Usuario usando eventos en\nJavascript')">Evento Pulsa Aquí</p>	
+					<p onclick="document.getElementById('mensaje').innerHTML = 'Mensaje\nal\nUsuario usando eventos en\nJavascript'">Evento Pulsa Aquí</p>
+					<p id="mensaje"></p>
+					<br>
+					<br><br>
+					
+
+					
+
+				</article>
+			</div>
+		</section>			
+			<footer id="pie">
+				Copyright &copy; 2015
+		</footer>
+	<div>	
+</body>
+</html>

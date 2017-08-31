@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/validaciones.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+    $("#titulo").click(function(){
+        $("#div1").fadeToggle();
+        
+    });
+});
+
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+</head>
+<body>
+	<div id="body">
+	<div id="titulo">
+	<p onmouseover="funmouseover(this)" onmouseout="funmouseout(this)">Página 3</p>
+	</div>
+	<div id="div1">
+	<form action="">
+		<input type="text" id="cedula" placeholder="Cédula" maxlength="8" onblur="comprobarcedula();">
+		
+		<input type="button" value="Ultimo número" onclick="alert(ultimonum());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarcedula1();"  id="cedula1" placeholder="Cédula" maxlength="8">
+		
+		<input type="button" value="Primer número" onclick="alert(primernum());">
+	</form><br>
+	<form action="">
+		<input type="text" maxlength="1" id="cedula2" placeholder="Último número de cédula">
+		
+		<input type="button" value="Día de compra" onclick="alert(diacompra());">
+	</form><br>
+
+	<form action="">
+		<label>Terminal de cédula por día</label><br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)"  value="0 y 1">Lunes <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="2 y 3">Martes <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="4 y 5">Miercoles <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="6 y 7">Jueves <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="8 y 9">Viernes <br>
+		Puedes comprar los dias: <input type="text" id="result" disabled="disabled">
+
+		
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarcedula3();"  id="cedula3" placeholder="Cédula" maxlength="8">
+		
+		<input type="button" value="Separar numeros" onclick="alert(separar());">
+	</form><br>
+	<form action="">
+		<input type="text" onblur="comprobarcedula4();"  id="cedula4" placeholder="Cédula" maxlength="8">
+		
+		<input type="button" value="Sumar números en la cédula" onclick="alert(sumarr());">
+	</form><br>
+
+
+
+	<a href="index.html">Página Principal</a>
+	</div>
+	</div>
+</body>
+</html>

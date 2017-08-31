@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Página 3</h1>
+
+	<form action="">
+		<input type="text" id="cedula" placeholder="Cédula">
+		
+		<input type="button" value="Ultimo número" onclick="alert(ultimonum());">
+	</form>
+	<form action="">
+		<input type="text" id="cedula1" placeholder="Cédula">
+		
+		<input type="button" value="Primer número" onclick="alert(primernum());">
+	</form>
+	<form action="">
+		<input type="text" maxlength="1" id="cedula2" placeholder="Último número de cédula">
+		
+		<input type="button" value="Día de compra" onclick="alert(diacompra());">
+	</form>
+
+	<form action="">
+		<label>Terminal de cédula por día</label><br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="0 y 1">Lunes <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="2 y 3">Martes <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="4 y 5">Miercoles <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="6 y 7">Jueves <br>
+		<input type="radio" name="terminal" onclick="myFunction(this.value)" value="8 y 9">Viernes <br>
+		Puedes comprar los dias: <input type="text" id="result">
+		
+	</form>
+	<form action="">
+		<input type="text" id="cedula3" placeholder="Cédula">
+		
+		<input type="button" value="Separar numeros" onclick="alert(separar());">
+	</form>
+	<form action="">
+		<input type="text" id="cedula4" placeholder="Cédula">
+		
+		<input type="button" value="Sumar números en la cédula" onclick="alert(sumarr());">
+	</form>
+
+	<script>
+		var ultimonum = function(cedula){
+			var cedula = document.getElementById("cedula").value;
+			var lastchar = cedula.charAt(cedula.length-1);
+			return lastchar;
+		}
+
+		var primernum = function(cedula1){
+			var cedula = document.getElementById("cedula1").value;
+			var lastchar = cedula.charAt(0);
+			return lastchar;
+		}
+
+		var diacompra = function(cedula2){
+			var cedula = document.getElementById("cedula2").value;
+			if (cedula==0 || cedula==1){
+				alert("Lunes");
+			}else{
+				if(cedula==2 || cedula==3){
+					alert("Martes");
+				}else{
+					if(cedula==4 || cedula==5){
+						alert("Miercoles");
+					}else{
+						if(cedula==6 || cedula==7){
+							alert("Jueves");
+						}else{
+							if(cedula==8 || cedula==9){
+								alert("Viernes");
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		function myFunction(terminal){
+			document.getElementById("result").value = terminal;
+		}
+
+		var separar = function(cedula3){
+			var cedula = document.getElementById("cedula3").value;
+			var res = cedula.split("");
+			return res;
+		}
+
+		var sumarr = function(cedula4){
+			var cedula = document.getElementById("cedula4").value;
+			var ress = cedula.split("").map(Number);
+			
+			var suma = 0;
+			for (i=0;i<cedula.length;i++){
+				suma = suma + ress[i];
+			}
+			return suma;
+		}
+	</script>
+
+	<a href="index.html">Página Principal</a>
+</body>
+</html>
