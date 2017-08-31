@@ -1,0 +1,10 @@
+-definicion
+-forma de trabajo
+	-actualizacion asincrona
+-objeto xml httprequest
+-jquery ajax
+	-json
+	-planteamiento
+	-estado(before,succes,error)
+	-errorres
+-practica

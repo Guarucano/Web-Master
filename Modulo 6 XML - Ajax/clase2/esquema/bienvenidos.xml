@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mensaje 
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="Mensaje.xsd">
+		Hola Mundo
+</Mensaje>

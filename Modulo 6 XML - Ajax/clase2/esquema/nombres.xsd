@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ListaEmpleados">
+      <xs:complexType>
+         <xs:sequence>
+          <xs:element ref="NombreEmpleado" minOccurs="0" maxOccurs="unbounded">
+          </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="NombreEmpleado">
+      <xs:complexType>
+        <xs:all>
+          <xs:element name="PrimerNombre"></xs:element>
+          <xs:element name="SegundoNombre" minOccurs="0"></xs:element>
+          <xs:element name="Apellido"></xs:element>
+        </xs:all>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>

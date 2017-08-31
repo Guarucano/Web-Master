@@ -1,0 +1,1 @@
+<a href='index.php'><img id='imgcabecera' src='image/etech.png'></a>

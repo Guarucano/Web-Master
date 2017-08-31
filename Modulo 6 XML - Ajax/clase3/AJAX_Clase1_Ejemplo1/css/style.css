@@ -1,0 +1,34 @@
+#uno{
+	background-color: blue;
+	height: 200px;
+}
+
+#dos{
+	background-color: green;
+	height: 200px;
+	display: none;
+}
+
+#tres{
+	background-color: gray;
+	height: 200px;
+}
+
+#cuatro{
+	background-color: red;
+	border-radius: 100%;
+	height: 200px;
+}
+
+#cinco{
+	background-color: yellow;
+	border-radius: 100%;
+	height: 200px;
+	display: none;
+}
+
+#seis{
+	background-color: orange;
+	border-radius: 100%;
+	height: 200px;
+}

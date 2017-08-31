@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResumenCalificacionMateria>
+		<Estudiante ID="2002A23">Juan</Estudiante>
+		<DetalleMateria Materia="Matemáticas">A
+		</DetalleMateria>
+		<DetalleMateria Materia="Física">A
+		</DetalleMateria>
+		<DetalleMateria Subject="Química">C
+		</DetalleMateria>
+		<DetalleMateria Materia="Computación">A
+		</DetalleMateria>
+	</ResumenCalificacionMateria>

@@ -1,0 +1,4 @@
+debe mostrar dos cosas
+1- una tabla con informacion de las sulicitudes hechas por un usuario. 
+Nota: el usuario debe escojerse por un combo trabajar con onChange
+2- debe mostrar la cantidad de solicitudes en una parroquia 

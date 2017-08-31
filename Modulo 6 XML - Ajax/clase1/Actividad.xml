@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TiendaDeRopa SYSTEM "dtdropa.dtd">
+<TiendaDeRopa>
+	<damas>
+		<DetalleRopa>Blusa</DetalleRopa>
+		<Marca>Tommy</Marca>
+		<Talla>M</Talla>
+		<Color>Amarillo</Color>
+		<Precio>17000</Precio>
+		<Cantidad>5</Cantidad>
+
+		<DetalleRopa>Zandalia</DetalleRopa>
+		<Marca>Vic Matie</Marca>
+		<Talla>37</Talla>
+		<Color>Dorado</Color>
+		<Precio>25000</Precio>
+		<Cantidad>2</Cantidad>
+
+
+		<!-- <DetalleRopa item="Blusa" marca="Tommy" talla="M" color="amarillo" precio="17000">5
+		</DetalleRopa>
+		<DetalleRopa item="Zandalia" marca="Vic Matie" talla="37" color="dorado" precio="25000">2
+		</DetalleRopa>-->
+
+	</damas>
+	<caballeros>
+	
+		<DetalleRopa>Pantalon</DetalleRopa>
+		<Marca>Tommy</Marca>
+		<Talla>36</Talla>
+		<Color>Negro</Color>
+		<Precio>30000</Precio>
+		<Cantidad>10</Cantidad>
+
+		<DetalleRopa>Camisa</DetalleRopa>
+		<Marca>KE</Marca>
+		<Talla>L</Talla>
+		<Color>Blanco</Color>
+		<Precio>20000</Precio>
+		<Cantidad>5</Cantidad>
+	
+		<DetalleRopa>Par de Zapato</DetalleRopa>
+		<Marca>Rossi</Marca>
+		<Talla>40</Talla>
+		<Color>Marron</Color>
+		<Precio>55000</Precio>
+		<Cantidad>6</Cantidad>
+
+
+
+		<!--<DetalleRopa item="Pantalon" marca="Tommy" talla="36" color="negro" precio="30000">10
+		</DetalleRopa>
+		<DetalleRopa item="Camisa" marca="KE" talla="L" color="blanco" precio="20000">5
+		</DetalleRopa>
+		<DetalleRopa item="Par de Zapato" marca="Rossi" talla="40" color="marron" precio="55000">6
+		</DetalleRopa>-->
+
+	</caballeros>
+</TiendaDeRopa>

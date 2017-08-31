@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ResumenCalificacionMateria[
+<!ELEMENT ResumenCalificacionMateria (Estudiante, Materia, Calificacion)>
+<!ELEMENT Estudiante (Nombre,ID,Nota)>
+<!ELEMENT Materia (#PCDATA)>
+<!ELEMENT Calificacion (#PCDATA)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT Nota ANY >
+]>
+<ResumenCalificacionMateria>
+	<Estudiante>
+		<Nombre> Pedro Villalba </Nombre>
+		<ID> 2002B54 </ID>
+		<Nota> La afición de Pedro es escalar montañas
+             </Nota>
+	</Estudiante>
+	<Materia>Matemáticas</Materia>
+	<Calificacion>A</Calificacion>
+</ResumenCalificacionMateria>

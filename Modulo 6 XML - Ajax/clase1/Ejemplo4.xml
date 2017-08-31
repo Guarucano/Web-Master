@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codigochequeo>
+<Instruccion>
+Escribe el  programa y chequea la salida
+</Instruccion>
+<Navegador>Firefox</Navegador>
+<Codigo>
+<![CDATA[ 
+function ejerplificarSintaxis() {
+        var i=10;
+        document.write("Numero es: “+ i);
+        document.write(“Dirección es: “ +&i);
+        if (i > 0 ) {
+            document.write("Número es positivo”);
+        }
+} 
+
+]]>  
+</Codigo>
+</codigochequeo>

@@ -1,0 +1,10 @@
+<!ELEMENT TiendaDeRopa (damas, caballeros)>
+<!ELEMENT damas (DetalleRopa,Marca,Talla,Color,Precio,Cantidad)>
+<!ELEMENT caballeros (DetalleRopa,Marca,Talla,Color,Precio,Cantidad)>
+
+<!ELEMENT DetalleRopa (#PCDATA)>
+<!ELEMENT Marca (#PCDATA)>
+<!ELEMENT Talla (#PCDATA)>
+<!ELEMENT Color (#PCDATA)>
+<!ELEMENT Precio (#PCDATA)>
+<!ELEMENT Cantidad (#PCDATA)>

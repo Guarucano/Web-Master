@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="CONTACTO">
+    <xs:complexType>
+    <xs:sequence>
+            <xs:element name="NOMBRE" type="xs:string" />
+            <xs:element name="EMPRESA" type="xs:string" />
+            <xs:element name="TELEFONO" type="xs:integer" />
+     </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

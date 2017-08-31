@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="escuela">
+      <xs:complexType>
+         <xs:sequence>
+          <xs:element ref="alumno" minOccurs="0" maxOccurs="unbounded">
+          </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="alumno">
+      <xs:complexType>
+        <xs:all>
+          <xs:element name="numero_ID"></xs:element>
+          <xs:element name="nombre"></xs:element>
+          <xs:element name="apellido"></xs:element>
+          <xs:element name="cedula"></xs:element>
+          <xs:element name="telefono"></xs:element>
+        </xs:all>
+      </xs:complexType>
+    </xs:element>
+
+   
+  </xs:schema>

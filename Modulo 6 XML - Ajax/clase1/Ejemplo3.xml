@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormulaMat>
+		<Formula>B</Formula>
+		<Condicion No="1"> A&lt;B </Condicion>
+		<Condicion No="2"> A&gt;B </Condicion>
+		<Condicion No="3"> A=B  </Condicion>
+	</FormulaMat>

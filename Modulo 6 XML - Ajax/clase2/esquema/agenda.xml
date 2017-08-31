@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONTACTO
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="contacto.xsd">
+
+<NOMBRE>MIGUEL</NOMBRE>
+<EMPRESA>URBE</EMPRESA>
+<TELEFONO>02617253457</TELEFONO>
+		
+</CONTACTO>

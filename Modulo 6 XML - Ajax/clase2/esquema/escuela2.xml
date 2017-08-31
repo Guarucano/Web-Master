@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<?xml-stylesheet type="text/xsl"
+ href="escuela2.xsl"?>
+<escuela xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="escuela2.xsd">
+
+
+
+	<alumno>
+        <numero_ID>1232654</numero_ID>
+    	<nombre>Miguel</nombre>
+    	<apellido>Ordoñez</apellido>
+    	<cedula>19546489</cedula>
+    	<telefono>02625875854</telefono>
+    </alumno>
+
+    	<alumno>
+        <numero_ID>123</numero_ID>
+    	<nombre>Miguasdel</nombre>
+    	<apellido>Ordasdoñez</apellido>
+    	<cedula>19546123489</cedula>
+    	<telefono>02612325875854</telefono>
+    </alumno>
+
+    <alumno>
+        <numero_ID>No</numero_ID>
+    	<nombre>Entiendo</nombre>
+    	<apellido>Un</apellido>
+    	<cedula>Coño</cedula>
+    	<telefono>De la madre</telefono>
+    </alumno>
+
+</escuela>
