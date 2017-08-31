@@ -1,0 +1,204 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+a{   
+	text-decoration:none;
+	color: inherit;   
+} 
+
+#body{
+	font-family: arial;
+	color: #fff;
+	margin: 0 auto;
+	width: 80%;
+	margin: auto;
+	background-color: red;
+}
+
+#nav{
+	width: 100%;
+	height: 50px;
+	background-color: #000;
+	word-spacing: 70px;
+}
+
+#nav ul{
+	text-align: right;
+	margin-right: 100px;
+	padding-top: 15px;
+}
+
+#nav ul li{
+	font-size: 16px;
+	display: inline;
+	list-style: none;
+}
+
+#header img{
+	float: left;
+	width: 100%;
+	display: inline-block;
+}
+
+#cont{
+	float: left;
+	width: 100%;
+	height: 500px;
+	background-image: url(../img/fondonegro.jpg);
+}
+
+#tit{
+	float: left;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+#tit p{
+	margin-top: 25px;
+	font-size: 20px;
+}
+
+#cin{
+	padding-left: 5%; 
+	height: 500px;
+	width: 100%;
+}
+
+.iimg{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 30%;
+	height: 350px;
+	display: inline-block;
+}
+
+.iimg img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 65%;
+}
+
+.itex{
+	width: 30%;
+	height: 90px;
+	display: inline-block;
+}
+
+.itex p{
+	text-align: center;
+	margin-top: 35px;
+	font-size: 20px;
+}
+
+#cont2{
+	background-color: #008080;
+	float: left;
+	width: 100%;
+	height: 550px;
+	background-image: url(../img/mapacontacto.png);
+	background-size: 100% 500px;
+	background-repeat: no-repeat;
+}
+
+#ctc{
+	float: left;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+#ctc p{
+	padding-top: 80px;
+	font-size: 20px;
+}
+
+#cofo{
+	float: left;
+	width: 100%;
+	height: 300px;
+}
+
+.info{
+	float: left;
+	width: 50%;
+	height: 300px;
+}
+
+.info input{
+	border-radius: 5px 5px 5px 5px; 
+	margin-left: 70px;
+	padding-left: 20px;
+	width: 85%;
+	height: 50px;
+}
+
+.info2{
+	float: left;
+	width: 50%;
+	height: 300px;
+}
+
+.info2 textarea{
+	margin-left: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	width: 85%;
+	height: 210px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#btm{
+	float: left;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+}
+
+#btm input{
+	width: 15%;
+	height: 30px;
+	background-color: #006060;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+#map{
+	float: left;
+	width: 100%;
+	height: 400px;
+	background-color: white;
+}
+
+#footer{
+	float:  left;
+	width: 100%;
+	height: 50px;
+	background-color: black;
+}
+
+.fd{
+	float: left;
+	width: 50%;
+	height: 50px;
+}
+
+.fd #p1{
+	padding-left: 100px;
+	padding-top: 20px;
+}
+
+.fd #p2{
+	padding-left: 400px;
+	padding-top: 20px;
+}

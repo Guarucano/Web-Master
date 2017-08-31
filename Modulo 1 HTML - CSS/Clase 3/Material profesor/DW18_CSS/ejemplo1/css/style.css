@@ -1,0 +1,74 @@
+/*SELECTOR DE ETIQUETA*/
+
+h1 {
+	color: blue;
+	font-family: "Arial";
+}
+
+/*SELECTOR DE CLASE*/
+
+.uno{
+	color: green;
+	text-align: right;
+}
+
+/*SELECTO DE ID*/
+
+#uno{
+	color: red;
+	text-align: right;
+}
+
+#dos{
+	font-style: italic;
+}
+
+#tres{
+	font-size: 18px;
+}
+
+/*SELECTOR DESCENDENTE*/
+
+div label{
+	color: brown;	
+}
+
+/*SELECTOR DE HIJOS*/
+
+div > p > label{
+	font-size: 30px;
+}
+
+/*SELECTOR ADYACENTE*/
+
+#dos + #uno{
+	font-size: 40px;
+}
+
+/*PSEUDO SELECTORES*/
+
+/*HOVER*/
+
+h1:hover{
+	color: yellow;
+}
+
+/*COLOR DE SELECCIÓN*/
+
+p::selection{
+	color: #ccc;
+}
+
+/*COMBINACIÓN DE SELECTORES*/
+
+div > p > label:hover{
+	font-size: 60px;
+}
+
+/*SELECTOR UNIVERSAL*/
+
+::selection{
+	color: red;
+	background: #000;
+}
+

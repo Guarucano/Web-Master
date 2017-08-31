@@ -1,0 +1,72 @@
+/*selector de etiqueta*/
+h1{
+	color: blue;
+	font-family: "Arial";
+}
+
+/*Selector de clase*/
+
+/*
+# -> id
+. -> Clase
+*/
+
+.uno{
+	color: green;
+	text-align: right;
+}
+
+/*selector de id*/
+#uno{
+	color: red;
+	text-align: right;
+}
+
+#dos{
+	font-style: italic;
+}
+
+#tres{
+	font-size: 18px;
+}
+
+/*selector descendente*/
+
+div label{
+	color: brown;
+}
+
+/*selector de hijos*/
+
+div > p > label{
+	font-size: 30px;
+}
+
+/*selector adyacente*/
+
+#dos + #tres{
+	font-size: 40px;
+}
+
+/*pseudo selectores*/
+/*hover*/
+
+h1:hover{
+	color: yellow;
+}
+
+/*color seleccion*/
+p::selection{
+	color: #ccc;
+}
+
+/*combinacion de selectores*/
+div > p > label:hover{
+	font-size: 60px;
+}
+
+/*selector universal*/
+::selection{
+	color: red;
+	background-color: #000; 
+}

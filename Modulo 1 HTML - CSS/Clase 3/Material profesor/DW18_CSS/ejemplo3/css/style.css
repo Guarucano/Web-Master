@@ -1,0 +1,76 @@
+#amarillo{
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: yellow;
+	display: inline-block;
+	z-index: 9;
+}
+
+#verde{
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: green;
+	display: inline-block;
+	position: relative;
+	top: 50px;
+	left: 0;
+}
+
+#azul{
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: blue;
+	display: inline-block;
+	position: relative;
+	top: 60px;
+	left: 60px;
+}
+
+.maximo{
+	width: 700px;
+	border: 1px dashed blue;
+}
+
+.clase1{
+	width: 120px;
+	height: 100px;
+	background-color: #ccc;
+	border: 1px solid #000;
+	float: left;
+}
+
+.clase{
+	width: 120px;
+	height: 100px;
+	background-color: #ccc;
+	border: 1px solid #000;
+	float: right;
+}
+
+.clase2{
+	width: 100%;
+	height: 100px;
+	background-color: #ccc;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+.tabla{
+	border-collapse: collapse;
+}
+
+#ocho:hover{
+	background-color: #000;
+	color: yellow;
+}
+
+.tabla td:hover {
+	background-color: gray;
+	color: blue;
+}

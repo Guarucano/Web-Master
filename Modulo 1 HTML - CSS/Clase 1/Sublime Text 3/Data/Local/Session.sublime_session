@@ -1,0 +1,661 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3083,
+	"last_window_id": 1,
+	"log_indexing": false,
+	"settings":
+	{
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"pad",
+						"padding-bottom"
+					],
+					[
+						"mar",
+						"margin-bottom"
+					],
+					[
+						"margin",
+						"margin-bottom"
+					],
+					[
+						"padi",
+						"padding-top"
+					],
+					[
+						"bor",
+						"border-width"
+					],
+					[
+						"PAD",
+						"padding-top"
+					],
+					[
+						"op",
+						"opacity"
+					],
+					[
+						"back",
+						"background-image"
+					],
+					[
+						"wid",
+						"width"
+					],
+					[
+						"wi",
+						"width"
+					],
+					[
+						"z",
+						"z-index"
+					],
+					[
+						"te",
+						"text-align"
+					],
+					[
+						"tex",
+						"text-align"
+					],
+					[
+						"sub",
+						"submit"
+					],
+					[
+						"t",
+						"type	Attr"
+					],
+					[
+						"b",
+						"border	Attr"
+					],
+					[
+						"border",
+						"border-color"
+					],
+					[
+						"bac",
+						"background-color"
+					],
+					[
+						"padd",
+						"padding-left"
+					],
+					[
+						"ba",
+						"background"
+					],
+					[
+						"backg",
+						"background-color"
+					],
+					[
+						"ca",
+						"class	Attr"
+					],
+					[
+						"c",
+						"class	Attr"
+					],
+					[
+						"marg",
+						"margin-top"
+					],
+					[
+						"fl",
+						"float"
+					],
+					[
+						"listt",
+						"list-style-image"
+					],
+					[
+						"lists",
+						"list-style-type"
+					],
+					[
+						"in",
+						"inline-block"
+					],
+					[
+						"bg",
+						"bgcolor	Attr"
+					],
+					[
+						"l",
+						"legend	Tag"
+					],
+					[
+						"i",
+						"if	<?php if (…) ?> … <?php endif ?>"
+					],
+					[
+						"e",
+						"else	<?php else: ?>"
+					],
+					[
+						"h",
+						"h2	Tag"
+					],
+					[
+						"w",
+						"w	width"
+					],
+					[
+						"border-",
+						"border-radius"
+					],
+					[
+						"paddi",
+						"padding"
+					],
+					[
+						"paddin",
+						"padding-top"
+					],
+					[
+						"font",
+						"font-family"
+					],
+					[
+						"rb",
+						"rgba()"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/ActividadFinal/index.html",
+					"settings":
+					{
+						"buffer_size": 2648,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica7/index.html",
+					"settings":
+					{
+						"buffer_size": 7948,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/ActividadFinal/CSS/style.css",
+					"settings":
+					{
+						"buffer_size": 2830,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"contents": "*{\n	margin: 0px;\n	padding: 0px;\n}\n\na{   \n	text-decoration:none;\n	color: inherit;   \n} \n\n#body{\n	font-family: arial;\n	color: #fff;\n	margin: 0 auto;\n	width: 80%;\n	margin: auto;\n	background-color: red;\n}\n\n#nav{\n	width: 100%;\n	height: 50px;\n	background-color: #000;\n	word-spacing: 70px;\n}\n\n#nav ul{\n	text-align: right;\n	margin-right: 100px;\n	padding-top: 15px;\n}\n\n#nav ul li{\n	font-size: 16px;\n	display: inline;\n	list-style: none;\n}\n\n#header img{\n	float: left;\n	width: 100%;\n	display: inline-block;\n}\n\n#cont{\n	float: left;\n	width: 100%;\n	height: 500px;\n	background-image: url(../img/fondonegro.jpg);\n}\n\n#tit{\n	float: left;\n	width: 100%;\n	height: 50px;\n	text-align: center;\n}\n\n#tit p{\n	margin-top: 25px;\n	font-size: 20px;\n}\n\n#cin{\n	padding-left: 5%; \n	height: 500px;\n	width: 100%;\n}\n\n.iimg{\n	position: relative;\n	top: 0;\n	bottom: 0;\n	left: 0;\n	right: 0;\n	margin: auto;\n	width: 30%;\n	height: 350px;\n	display: inline-block;\n}\n\n.iimg img{\n	position: absolute;\n	top: 0;\n	bottom: 0;\n	left: 0;\n	right: 0;\n	margin: auto;\n	width: 65%;\n}\n\n.itex{\n	width: 30%;\n	height: 90px;\n	display: inline-block;\n}\n\n\n.itex p{\n	text-align: center;\n	margin-top: 35px;\n	font-size: 20px;\n}\n#cont2{\n	background-color: #008080;\n	float: left;\n	width: 100%;\n	height: 550px;\n	background-image: url(../img/mapacontacto.png);\n	background-size: 100% 500px;\n	background-repeat: no-repeat;\n}\n\n#ctc{\n	float: left;\n	width: 100%;\n	height: 100px;\n	text-align: center;\n}\n\n#ctc p{\n	padding-top: 80px;\n	font-size: 20px;\n}\n\n#cofo{\n	float: left;\n	width: 100%;\n	height: 300px;\n}\n\n.info{\n	float: left;\n	width: 50%;\n	height: 300px;\n}\n\n.info input{\n	border-radius: 5px 5px 5px 5px; \n	margin-left: 70px;\n	padding-left: 20px;\n	width: 85%;\n	height: 50px;\n}\n\n.info2{\n	float: left;\n	width: 50%;\n	height: 300px;\n}\n\n.info2 textarea{\n	margin-left: 20px;\n	padding-left: 20px;\n	padding-top: 20px;\n	width: 85%;\n	height: 210px;\n	border-radius: 5px 5px 5px 5px;\n}\n\n#btm{\n	float: left;\n	width: 100%;\n	height: 150px;\n	text-align: center;\n}\n\n#btm input{\n	width: 15%;\n	height: 30px;\n	background-color: #006060;\n	border: 1px solid #fff;\n	color: #fff;\n}\n\n#map{\n	float: left;\n	width: 100%;\n	height: 400px;\n	background-color: white;\n}\n\n#footer{\n	float:  left;\n	width: 100%;\n	height: 50px;\n	background-color: black;\n}\n\n.fd{\n	float: left;\n	width: 50%;\n	height: 50px;\n}\n\n.fd #p1{\n	padding-left: 100px;\n	padding-top: 20px;\n}\n\n.fd #p2{\n	padding-left: 400px;\n	padding-top: 20px;\n}",
+					"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica Final Jesus/css/style.css",
+					"file_size": 2600,
+					"file_write_time": 130918296267157033,
+					"settings":
+					{
+						"buffer_size": 2397,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica7/CSS/style.css",
+					"settings":
+					{
+						"buffer_size": 1894,
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 392.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 400.0
+			},
+			"console":
+			{
+				"height": 126.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica Final Jesus/index.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Material profesor/DW18_CSS/ejemplo1/css/style.css",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Material profesor/DW18_CSS/ejemplo1/index.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 1/Practica 1 Miguel Guarucano.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 1/ejemplo 3.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica7/CSS/style.css",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica7/index.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Material profesor/DW18_CSS/ejemplo3/css/style.css",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Material profesor/DW18_CSS/ejemplo3/index.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/actividad3.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/practica6.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/Practica5.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/practica tabla.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/ejemplo2.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/ejemplo.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/material profesor/index.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/formulario.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 1/Homepage/nuevos.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 2/actividad3",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/verga3",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 1/Urbe/FAQS.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/verga.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/verga2.html",
+				"/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 1/rebeca.html",
+				"/C/Documents and Settings/Clases/Escritorio/Urbe/Productos/BaseDato.html",
+				"/C/Documents and Settings/Clases/Escritorio/Urbe/Productos/Descargas/Arreglos.html",
+				"/C/Documents and Settings/Clases/Escritorio/Urbe/Productos/Descargas/Ensayos.html",
+				"/C/Documents and Settings/Clases/Escritorio/Urbe/Productos/ServidorCentral.html",
+				"/C/Documents and Settings/Clases/Escritorio/Urbe/FAQS.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/Material Profesor/ejemplo5.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/ejemplo 6.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/ejemplo 5.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/ejemplo 4.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/ejemplo 3.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/Practica 1 Miguel Guarucano.html",
+				"/C/Users/Date/Desktop/prueba.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/ejemplo2.html",
+				"/C/Documents and Settings/Clases/Escritorio/Clase 1/Sublime Text 3/Data/Packages/User/ColorPicker.sublime-settings",
+				"/C/xampp/htdocs/AJAXFINAL/conexion.php",
+				"/C/xampp/htdocs/examen_final/conexion.php",
+				"/C/wamp/www/tabla2/Actividad3_JesusBriceño/index.html",
+				"/C/wamp/www/tabla2/Actividad3_JesusBriceño/registro.php",
+				"/C/wamp/www/Examen_BriceñoHernandez/registro.php",
+				"/F/Proyecto Lily Paula2/css/agency.css",
+				"/F/Proyecto Lily Paula2/css/bootstrap.css",
+				"/F/Proyecto Lily Paula2/index.html",
+				"/C/Documents and Settings/Clases/Escritorio/bd.sql",
+				"/E/Proyectos Web/Proyecto Lily Paula/css/agency.css",
+				"/E/Proyectos Web/Proyecto Lily Paula/css/estilo.css",
+				"/E/Proyectos Web/Proyecto Lily Paula/css/bootstrap.css",
+				"/E/Proyectos Web/Proyecto Lily Paula/index.html",
+				"/C/xampp/htdocs/proyecto/control.php",
+				"/C/xampp/htdocs/proyecto/reachend.php",
+				"/C/xampp/htdocs/proyecto/sesion.php",
+				"/F/panama/css/agency.css",
+				"/F/panama/css/bootstrap.css",
+				"/F/panama/css/owl.theme.css",
+				"/F/panama/index.html",
+				"/F/empresas1/index.html",
+				"/C/Documents and Settings/Clases/Escritorio/prueba.html"
+			],
+			"find":
+			{
+				"height": 30.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"cofo",
+					"info",
+					"info2",
+					"info",
+					"titulo2",
+					"<p>",
+					"orange",
+					"class=\"tabla\"",
+					"red",
+					"white",
+					"</a>",
+					"<tr>",
+					"td",
+					"<b>",
+					"</b>",
+					"<tr>",
+					"M",
+					"<td>",
+					"td",
+					"!",
+					"Jugemu",
+					".75",
+					"0, 0, 0",
+					"\"row\"",
+					".materiales",
+					"team/",
+					"portfolio",
+					"contacto",
+					"#2A2A2A",
+					"15px 5px",
+					"5px 5px",
+					".navbar-nav > li > a",
+					"100px",
+					"portfolio",
+					"/franelas",
+					"franelas/",
+					"mydb",
+					"team",
+					"6",
+					"#E0C73B",
+					"<h6>texto</h6>",
+					"class=\"skillp\"",
+					"<p>",
+					"333333",
+					"...",
+					"h2",
+					"30",
+					"30px",
+					"30",
+					";\n",
+					"1",
+					"400px",
+					"4"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/ActividadFinal/index.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2648,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2624,
+										2624
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/HTML/HTML.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 1452.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica7/index.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 7948,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										136,
+										92
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/HTML/HTML.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 132.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						}
+					]
+				},
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 2,
+							"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/ActividadFinal/CSS/style.css",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2830,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2479,
+										2479
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/CSS/CSS.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 3916.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica Final Jesus/css/style.css",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2397,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										33,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 3938.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/D/Mis Documentos/Documentos Miguel/Mis Documentos/Web Master/Clase 3/Practica7/CSS/style.css",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1894,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1035,
+										985
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 2178.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 30.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.5,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,2,3,-32000,-32000,-1,-1,592,44,58,692",
+			"project": "",
+			"replace":
+			{
+				"height": 56.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 1,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

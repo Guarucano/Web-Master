@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form method="post" action="ejemplo2.html">
+		<b>Datos Personales</b><br>
+		<label>Nombre:</label>&nbsp;&nbsp;&nbsp;
+		<input type="text" maxlength="15" placeholder="Nombre"  required="required" autocomplete="off" name="nombre"> <br>
+		
+		<label>Apellido:</label>&nbsp;&nbsp;&nbsp;
+		<input type="text" maxlength="15" placeholder="Apellido"  required="required" autocomplete="off" name="apellido"> <br>
+		
+		<label>Cédula/RIF:</label>&nbsp;&nbsp;&nbsp;<br>
+		Cédula<input type="radio" name="seleccion" value="C">
+		RIF<input type="radio" name="seleccion" value="R"><br>
+		<input type="text" maxlength="8" placeholder="Cédula/RIF"  required="required" autocomplete="off" name="cedularif"> <br>
+		
+		<label>Dirección:</label>&nbsp;&nbsp;&nbsp;<br>
+		<textarea name="mensaje" id="" cols="20" rows="2" required="required" autocomplete="off"></textarea> <br>
+
+		<label>Teléfono:</label>&nbsp;&nbsp;&nbsp;
+		<select name="telefono" id="">
+			<option value="0412">0412</option>
+			<option value="0414">0414</option>
+			<option value="0424">0424</option>
+			<option value="0416">0416</option>
+			<option value="0426">0426</option>
+		</select>
+		<input type="text" maxlength="7" placeholder="Número"  required="required" autocomplete="off" name="número"> <br>
+
+		<label>Correo Electrónico:</label>&nbsp;&nbsp;&nbsp;
+		<input type="email" required="required" autocomplete="off" name="correo" placeholder="Correo Electrónico"><br>
+
+		<label>ZIP code:</label>&nbsp;&nbsp;&nbsp;
+		<input type="text" maxlength="15" placeholder="ZIP"  required="required" autocomplete="off" name="zip"> <br>
+
+		<hr>
+
+		<b>Datos de Inscripción</b><br>
+		<label>Fecha:</label>&nbsp;&nbsp;&nbsp;
+		<input type="date" min="2015-10-31" max="2016-10-31" required="required" autocomplete="off" name="fecha"><br>
+
+		<label>Condición de inscripción:</label>&nbsp;&nbsp;&nbsp;
+		<select name="condicion" id="">
+			<option value="General">General</option>
+			<option value="Poniente">Poniente</option>
+			<option value="Estudiante">Estudiante</option>
+			<option value="Patrocinador">Patrocinador</option>
+		</select><br>
+		
+		<label>Evento:</label>&nbsp;&nbsp;&nbsp;
+		<input type="text" maxlength="15" placeholder="Evento"  required="required" autocomplete="off" name="evento"> <br>
+
+		<hr>
+
+		<b>Formas de Pago</b><br>
+		Efectivo<input type="radio" name="seleccion2" value="Efe">
+		Cheque<input type="radio" name="seleccion2" value="Ch">
+		Crédito<input type="radio" name="seleccion2" value="Cr">
+		Débito<input type="radio" name="seleccion2" value="De">
+		Exonerado<input type="radio" name="seleccion2" value="Ex">
+
+		<hr>
+
+		<b>Renglón de obsercaviones</b><br>
+		<textarea name="observaciones" id="" cols="20" rows="3" required="required" autocomplete="off"></textarea> <br>
+
+		<hr>
+
+		<input type="submit" value="Enviar">
+
+	</form>
+</body>
+</html>

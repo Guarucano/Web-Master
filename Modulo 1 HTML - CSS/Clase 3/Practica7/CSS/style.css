@@ -1,0 +1,144 @@
+body{
+	background-color: black;
+}
+#principal{
+	border: 5px solid #C01823;
+	border-radius: 33px;
+	width: 80%;
+	margin: 0 auto;
+	background-color: #232323;
+	height: auto;
+
+	
+}
+
+#header{
+	border: 2px solid #C01823;
+	border-radius: 25px;
+	border-bottom-left-radius: 0%;
+	border-bottom-right-radius: 0%;
+	width: 100%;
+	height: 50px;
+	background: url(http://3.bp.blogspot.com/-8WMdV7JuP5g/UYiAZyoB6yI/AAAAAAAAAGo/lqZPIaMfncw/s1600/headerblog.png);
+	background-size: 9%;
+	background-position: 10% 0%;
+	background-repeat: no-repeat;
+	position: relative;
+
+}
+
+input,select,textarea{
+	border-radius: 5px;
+
+}
+
+#header ul{
+	padding-left: 200px;
+}
+#header li{
+	display: inline-block;
+	padding-left: 150px;
+	color: white;
+	font-family: arial;
+	
+} 
+p{
+	color: white;
+}
+
+.texto{
+	font-family: arial;
+}
+
+
+#mapa{
+	
+	
+	width: auto;
+	display: inline-block;
+	height: auto;
+	float: left;
+	position: fixed;
+	font-family: arial;
+}
+
+#mapa ul{
+	color: white;
+	list-style-image: url('../images/maru2.png');
+	
+}
+
+
+a{   
+	text-decoration:none;
+	color: inherit;   
+}
+
+#texto{
+	font-family: arial;
+	
+	width: 75%;
+	height: auto;
+	color: white;
+	display: inline-block;
+	position: relative;
+	left: 25%;
+	background: linear-gradient( to bottom, #121212, #232323);
+	
+
+}
+
+#informacion{
+	border: 2px solid #C01823;
+	border-radius: 50px;
+	width: 100%;
+	height: auto;
+	font-family: arial;
+	clear: left;
+	background-image:  url('../images/patron2.png');
+	background-repeat:  repeat;
+	} 
+
+	#informacion li{
+	display: inline-block;
+	margin-left: 10px;
+	padding-left: 60px;
+	color: white;
+	
+} 
+
+
+
+#tr td:hover {
+	background-color: #C01823;
+	color: black;
+	
+}
+
+#tr2:hover{
+	background-color: #C01823;
+	color: black;
+
+}
+
+.tabla table{
+	border-color: #C01823;
+
+}
+mark{
+	background-color: #C01823;
+	color: white;
+}
+#tr3:hover{
+	background-color: #C01823;
+	color: black;
+}
+
+h1,h2,h3{
+	font-family: arial black;
+}
+
+
+label{
+	font-family: arial;
+}

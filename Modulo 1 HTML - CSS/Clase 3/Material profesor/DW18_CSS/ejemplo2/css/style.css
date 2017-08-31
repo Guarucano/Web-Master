@@ -1,0 +1,73 @@
+p{
+	/*font-variant: small-caps;*/
+	/*font-weight: bold;*/
+	/*font-family: "Arial";*/
+	/*letter-spacing: 3px;*/
+	/*line-height: 50px;*/
+	/*text-align: justify;*/
+	/*text-transform: capitalize;*/
+	/*vertical-align: text-top;*/
+}
+
+#padre{
+	/*Alto y Ancho*/
+	width: 500px;
+	height: 300px;
+	min-height: 300px;
+	
+	/*Borde*/
+
+	border: 1px solid #ccc;
+	/*border-top: 5px solid blue;
+	border-bottom: 3px dashed #000;*/
+	border-radius: 50px;
+	
+	/*Relleno*/
+	padding: 50px 30px 60px 40px;
+	/*padding-top: 50px;
+	padding-right: 30px;
+	padding-bottom: 60px;
+	padding-left: 60px;*/
+	
+	/*Margen*/
+	margin: 0 auto;
+	/*margin-top: 50px;
+	margin-right: 30px;
+	margin-bottom: 60px;
+	margin-left: 60px;*/
+}
+
+#nuevo{
+	padding: 50px;
+}
+
+body{
+	/*background: url(./../images/Colinas.jpg), url(./../images/Invierno.jpg);
+	background-size: 400px,500px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%, 75% 30%;
+	background-color: #ccc;*/
+}
+
+/*ESTILOS PARA LA LISTA*/
+
+#a{
+	list-style-image: url(./../images/1.png);	
+}
+
+#b{
+	list-style-image: url(./../images/2.png);
+}
+
+#c{
+	list-style-image: url(./../images/3.png);
+}
+
+#d{
+	list-style-image: url(./../images/4.png);
+}
+
+/*Posicionamiento*/
+
+
+
