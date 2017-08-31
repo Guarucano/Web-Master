@@ -1,0 +1,74 @@
+1.- usar cd.. para llegar a C:\>
+
+2.- usar dir para ver todo el directorio de C:\>
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 10.1.8-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2015, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+
+4.- Para mostrar Bases de datos
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.03 sec)
+
+5.- Crear Base de datos Diplomado
+
+MariaDB [(none)]> create database diplomado;
+Query OK, 1 row affected (0.03 sec)
+
+6.- Usar DB Diplomado
+
+MariaDB [(none)]> use diplomado
+Database changed
+MariaDB [diplomado]>
+
+7.- Crear Tabla Perfil con sus atributos(idperfil, descrperfil)
+
+MariaDB [diplomado]> create table perfil(idperfil int(8)unsigned primary key aut
+o_increment,descriperfil varchar(50));
+Query OK, 0 rows affected (0.42 sec)
+
+
+8.- mostrar descripcion de la tabla perfil
+
+MariaDB [diplomado]> describe perfil;
++--------------+-----------------+------+-----+---------+----------------+
+| Field        | Type            | Null | Key | Default | Extra          |
++--------------+-----------------+------+-----+---------+----------------+
+| idperfil     | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| descriperfil | varchar(50)     | YES  |     | NULL    |                |
++--------------+-----------------+------+-----+---------+----------------+
+2 rows in set (0.05 sec)
+
+9.- Crear Tabla Datospersonales con sus atributos
+
+MariaDB [diplomado]> create table datospersonales(iddatosper int(8)unsigned prim
+ary key auto_increment,cedula int(8),nombre varchar(20),apellido varchar(20),ema
+il varchar(50));
+
+

@@ -1,0 +1,172 @@
+Microsoft Windows [Versión 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.5.27 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| cdcol              |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| webauth            |
++--------------------+
+9 rows in set (0.00 sec)
+
+mysql> create database diplomado;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use diplomado;
+Database changed
+mysql> create table perfil ( idperfil int(8) unsigned primary key auto_increment, descripcionper varchar(140) );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> describe perfil;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| idperfil       | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| descripcionper | varchar(140)    | YES  |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> create table datospersonale ( iddatosper int(8) unsigned primary key auto_increment, cedula varchar(8), nombre varchar(30) n
+ot null, apellido varchar(30) not null, email varchar(80) not null, sexo varchar(1) not null, nrocarnets varchar(8)not null, fechanac date not null, idperfil
+int(8) not null );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> describe datospersonale;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| iddatosper | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| cedula     | varchar(8)      | YES  |     | NULL    |                |
+| nombre     | varchar(30)     | NO   |     | NULL    |                |
+| apellido   | varchar(30)     | NO   |     | NULL    |                |
+| email      | varchar(80)     | NO   |     | NULL    |                |
+| sexo       | varchar(1)      | NO   |     | NULL    |                |
+| nrocarnets | varchar(8)      | NO   |     | NULL    |                |
+| fechanac   | date            | NO   |     | NULL    |                |
+| idperfil   | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+9 rows in set (0.01 sec)
+
+mysql> alter table datospersonale rename datospersonales;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
++---------------------+
+| Tables_in_diplomado |
++---------------------+
+| datospersonales     |
+| perfil              |
++---------------------+
+2 rows in set (0.00 sec)
+
+mysql> alter table datospersonales add column telefono int(11) after email;
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe datospersonales;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| iddatosper | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| cedula     | varchar(8)      | YES  |     | NULL    |                |
+| nombre     | varchar(30)     | NO   |     | NULL    |                |
+| apellido   | varchar(30)     | NO   |     | NULL    |                |
+| email      | varchar(80)     | NO   |     | NULL    |                |
+| telefono   | int(11)         | YES  |     | NULL    |                |
+| sexo       | varchar(1)      | NO   |     | NULL    |                |
+| nrocarnets | varchar(8)      | NO   |     | NULL    |                |
+| fechanac   | date            | NO   |     | NULL    |                |
+| idperfil   | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+10 rows in set (0.01 sec)
+
+mysql> alter table datospersonales change nrocarnets nrocarnet varchar(8) not null;
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe datospersonales;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| iddatosper | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| cedula     | varchar(8)      | YES  |     | NULL    |                |
+| nombre     | varchar(30)     | NO   |     | NULL    |                |
+| apellido   | varchar(30)     | NO   |     | NULL    |                |
+| email      | varchar(80)     | NO   |     | NULL    |                |
+| telefono   | int(11)         | YES  |     | NULL    |                |
+| sexo       | varchar(1)      | NO   |     | NULL    |                |
+| nrocarnet  | varchar(8)      | NO   |     | NULL    |                |
+| fechanac   | date            | NO   |     | NULL    |                |
+| idperfil   | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+10 rows in set (0.01 sec)
+
+mysql> alter table datospersonales modify telefono varchar(11) not null;
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe datospersonales;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| iddatosper | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| cedula     | varchar(8)      | YES  |     | NULL    |                |
+| nombre     | varchar(30)     | NO   |     | NULL    |                |
+| apellido   | varchar(30)     | NO   |     | NULL    |                |
+| email      | varchar(80)     | NO   |     | NULL    |                |
+| telefono   | varchar(11)     | NO   |     | NULL    |                |
+| sexo       | varchar(1)      | NO   |     | NULL    |                |
+| nrocarnet  | varchar(8)      | NO   |     | NULL    |                |
+| fechanac   | date            | NO   |     | NULL    |                |
+| idperfil   | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+10 rows in set (0.01 sec)
+
+mysql> alter table datospersonales drop nrocarnet;
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe datospersonales;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| iddatosper | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| cedula     | varchar(8)      | YES  |     | NULL    |                |
+| nombre     | varchar(30)     | NO   |     | NULL    |                |
+| apellido   | varchar(30)     | NO   |     | NULL    |                |
+| email      | varchar(80)     | NO   |     | NULL    |                |
+| telefono   | varchar(11)     | NO   |     | NULL    |                |
+| sexo       | varchar(1)      | NO   |     | NULL    |                |
+| fechanac   | date            | NO   |     | NULL    |                |
+| idperfil   | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+9 rows in set (0.01 sec)
+
+mysql> drop database diplomado;
+Query OK, 2 rows affected (0.05 sec)

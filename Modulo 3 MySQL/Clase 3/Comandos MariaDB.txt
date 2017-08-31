@@ -1,0 +1,10 @@
+show database;
+create database _____;
+use ______;   usar la base de datos creada
+create table ____(___,___); crear tabla con sus atributos 
+	create table perfil(idperfil int(8)unsigned primary key aut
+	o_increment,descriperfil varchar(50));
+
+describe _____; muestra la tabla que deseas ver
+
+alter table nombretabla drop column nombrecolumna;  borrar una columna en una tabla

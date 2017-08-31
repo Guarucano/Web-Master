@@ -1,0 +1,3 @@
+6 PAGINAS
+1 PAGINA TIENE UN FORMULARIO DE 10 CAMPOS
+que envie dato a una pagina que los reciba 

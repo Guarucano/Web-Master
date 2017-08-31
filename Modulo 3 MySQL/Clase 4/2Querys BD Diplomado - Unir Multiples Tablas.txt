@@ -1,0 +1,88 @@
+#select * from NOMBRET1 
+join NOMBRET2 
+on NOMBRET1.CAMPO=NOMBRET2.CAMPO 
+join NOMBRET3 
+on NOMBRET.CAMPO=NOMBRET3.CAMPO
+where NOMBRET.CAMPO=valor;
+
+
+
+select * from inscritoen 
+join datospersonales
+on inscritoen.iddatosper=datospersonales.iddatosper
+join diplomado 
+on inscritoen.iddiplomado=diplomado.iddiplomado
+join cohorte
+on inscritoen.idcohorte=cohorte.idcohorte;
+
+select cedula, nombre, apellido, nombredip as diplomado, nombrecoh as cohorte from inscritoen 
+join datospersonales
+on inscritoen.iddatosper=datospersonales.iddatosper
+join diplomado 
+on inscritoen.iddiplomado=diplomado.iddiplomado
+join cohorte
+on inscritoen.idcohorte=cohorte.idcohorte;
+
+
+
+select nombrecoh,nombremod,descripciontur, fechaini, fechafin, aula from mc 
+join cohorte
+on mc.idcohorte=cohorte.idcohorte
+join modulo
+on mc.idmodulo=modulo.idmodulo
+join turno
+on mc.idturno=turno.idturno;
+
+
+select cedula,nombre,apellido, nombremod, notafinal from notas
+join datospersonales
+on notas.iddatosper=datospersonales.iddatosper
+join mc
+on notas.idmc=mc.idmc
+join modulo
+on mc.idmodulo=modulo.idmodulo;
+
+
+
+#Union de Todas las tablas
+
+select cedula, nombre, apellido, descripcionper as perfil, nombredip as diplomado, nombrecoh as cohorte, nombremod as modulo, notafinal, aula, descripciontur as turno from
+inscritoen join datospersonales
+on inscritoen.iddatosper=datospersonales.iddatosper
+join perfil
+on datospersonales.idperfil=perfil.idperfil
+join diplomado 
+on inscritoen.iddiplomado=diplomado.iddiplomado
+join cohorte
+on inscritoen.idcohorte=cohorte.idcohorte 
+join notas
+on datospersonales.iddatosper=notas.iddatosper
+join mc
+on mc.idmc=notas.idmc
+join modulo
+on mc.idmodulo=modulo.idmodulo
+join turno
+on mc.idturno=turno.idturno;
+
+
+
+
+select cedula, nombre, apellido, descripcionper as perfil, nombredip as diplomado, nombrecoh as cohorte, nombremod as modulo, notafinal, aula, descripciontur as turno from
+inscritoen join datospersonales
+on inscritoen.iddatosper=datospersonales.iddatosper
+join perfil
+on datospersonales.idperfil=perfil.idperfil
+join diplomado 
+on inscritoen.iddiplomado=diplomado.iddiplomado
+join cohorte
+on inscritoen.idcohorte=cohorte.idcohorte 
+join notas
+on datospersonales.iddatosper=notas.iddatosper
+join mc
+on mc.idmc=notas.idmc
+join modulo
+on mc.idmodulo=modulo.idmodulo
+join turno
+on mc.idturno=turno.idturno where mc.idmc=1;
+
+

@@ -1,0 +1,246 @@
+MariaDB [(none)]> show databases;}
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.05 sec)
+
+    ->
+    -> create database diplomado;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '}
+
+create database diplomado' at line 1
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+MariaDB [(none)]> create database diplomado;
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [(none)]> show databases;}
++--------------------+
+| Database           |
++--------------------+
+| diplomado          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+    -> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '}
+show databases' at line 1
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| diplomado          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+MariaDB [(none)]> use diplomado;
+Database changed
+MariaDB [diplomado]> create table perfil(idperfil int(8)unsigned primary key auto_increment, descripcionper varchar(50));
+Query OK, 0 rows affected (0.19 sec)
+
+MariaDB [diplomado]> describe perfil;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| idperfil       | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| descripcionper | varchar(50)     | YES  |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+2 rows in set (0.02 sec)
+
+MariaDB [diplomado]> alter table perfil modify descripcionper varchar(50) not null;
+Query OK, 0 rows affected (0.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [diplomado]> describe perfil;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| idperfil       | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| descripcionper | varchar(50)     | NO   |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+MariaDB [diplomado]>
+
+MariaDB [diplomado]> create table datospersonales;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [diplomado]> create table datospersonales(iddatosper int(8)unsigned primary key auto_increment, cedula int(8) not null, nombre varchar(20) not null, apellido varchar(20) not null, email varchar(20) not null, telefono varchar(12) not null, sexo int(1) not null, nrocarnet int(8) not null, fechanac date not null, idperfil int(8) not null foreign key);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'foreign key)' at line 1
+MariaDB [diplomado]> create table datospersonales(iddatosper int(8)unsigned primary key auto_increment, cedula int(8) not null, nombre varchar(20) not null, apellido varchar(20) not null, email varchar(20) not null, telefono varchar(12) not null, sexo int(1) not null, nrocarnet int(8) not null, fechanac date not null, idperfil int(8) not null);
+Query OK, 0 rows affected (0.25 sec)
+
+MariaDB [diplomado]> describe datospersonales;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| iddatosper | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| cedula     | int(8)          | NO   |     | NULL    |                |
+| nombre     | varchar(20)     | NO   |     | NULL    |                |
+| apellido   | varchar(20)     | NO   |     | NULL    |                |
+| email      | varchar(20)     | NO   |     | NULL    |                |
+| telefono   | varchar(12)     | NO   |     | NULL    |                |
+| sexo       | int(1)          | NO   |     | NULL    |                |
+| nrocarnet  | int(8)          | NO   |     | NULL    |                |
+| fechanac   | date            | NO   |     | NULL    |                |
+| idperfil   | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+10 rows in set (0.02 sec)
+
+MariaDB [diplomado]> create table inscritoen(idinscritoen int(8)unsgined primary key auto_increment, iddatosper int(8) not null, iddatosper int(8) not null, iddiplomado int(8) not null, idcohorte int(8) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key auto_increment, iddatosper int(8) not null, iddatosper int(8) not nu' at line 1
+MariaDB [diplomado]> create table inscritoen (idinscritoen int(8)unsgined primary key auto_increment, iddatosper int(8) not null, iddatosper int(8) not null, iddiplomado int(8) not null, idcohorte int(8) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key auto_increment, iddatosper int(8) not null, iddatosper int(8) not nu' at line 1
+MariaDB [diplomado]> create table inscritoen(idinscritoen int(8)unsigned primary key auto_increment, iddatosper int(8) not null, iddatosper int(8) not null, iddiplomado int(8) not null, idcohorte int(8) not null);
+ERROR 1060 (42S21): Duplicate column name 'iddatosper'
+MariaDB [diplomado]> describe inscritoen;
+ERROR 1146 (42S02): Table 'diplomado.inscritoen' doesn't exi
+MariaDB [diplomado]> create table inscritoen(idinscritoen int(8)unsigned primary key auto_increment, iddatosper int(8) not null, iddiplomado int(8) not null, idcohorte int(8) not null);
+Query OK, 0 rows affected (0.20 sec)
+
+MariaDB [diplomado]> describe inscritoen;
++--------------+-----------------+------+-----+---------+----------------+
+| Field        | Type            | Null | Key | Default | Extra          |
++--------------+-----------------+------+-----+---------+----------------+
+| idinscritoen | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| iddatosper   | int(8)          | NO   |     | NULL    |                |
+| iddiplomado  | int(8)          | NO   |     | NULL    |                |
+| idcohorte    | int(8)          | NO   |     | NULL    |                |
++--------------+-----------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+MariaDB [diplomado]> create table notas(idnota int(8)unsigned primary key auto_increment, notafinal int(3) not null, iddatosper int(8) not null, idmc int(8) not null);
+Query OK, 0 rows affected (0.20 sec)
+
+MariaDB [diplomado]> describe notas;
++------------+-----------------+------+-----+---------+----------------+
+| Field      | Type            | Null | Key | Default | Extra          |
++------------+-----------------+------+-----+---------+----------------+
+| idnota     | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| notafinal  | int(3)          | NO   |     | NULL    |                |
+| iddatosper | int(8)          | NO   |     | NULL    |                |
+| idmc       | int(8)          | NO   |     | NULL    |                |
++------------+-----------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+MariaDB [diplomado]>
+
+MariaDB [diplomado]> create table cohorte(idcohorte int(8)unsigned primary key auto_increment, descripcioncoh varchar(200) not null, periodo varchar(10) notnull, nombrecoh varchar(20) not null, iddiplomado int(8) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' nombrecoh varchar(20) not null, iddiplomado int(8) not null)' at line 1
+MariaDB [diplomado]> create table cohorte(idcohorte int(8)unsigned primary key auto_increment, descripcioncoh varchar(100) not null, periodo varchar(10) notnull, nombrecoh varchar(20) not null, iddiplomado int(8) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' nombrecoh varchar(20) not null, iddiplomado int(8) not null)' at line 1
+MariaDB [diplomado]> create table cohorte(idcohorte int(8)unsigned primary key auto_increment, descripcioncoh varchar(100) not null, periodo varchar(10) notnull, nombrecoh varchar(20) not null, iddiplomado int(8) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' nombrecoh varchar(20) not null, iddiplomado int(8) not null)' at line 1
+MariaDB [diplomado]> create table cohorte(idcohorte int(8)unsigned primary key auto_increment, descripcioncoh varchar(100) not null, periodo varchar(10) notnull, nombrecohorte varchar(20), iddiplomado int(8) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' nombrecohorte varchar(20), iddiplomado int(8) not null)' at line 1
+MariaDB [diplomado]> create table cohorte(idcohorte int(8)unsigned primary key auto_increment, descripcioncoh varchar(100) not null, periodo varchar(10) not null, nombrecoh varchar(20) not null, iddiplomado int(8) not null);
+Query OK, 0 rows affected (0.20 sec)
+
+MariaDB [diplomado]> describe cohorte;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| idcohorte      | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| descripcioncoh | varchar(100)    | NO   |     | NULL    |                |
+| periodo        | varchar(10)     | NO   |     | NULL    |                |
+| nombrecoh      | varchar(20)     | NO   |     | NULL    |                |
+| iddiplomado    | int(8)          | NO   |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+5 rows in set (0.02 sec)
+
+MariaDB [diplomado]>
+
+MariaDB [diplomado]> create table diplomado(iddiplomado int(8)unsigned primary key auto_increment, nombredip varchar(20) not null, descripciondop varchar(100) not null, costo int(9) not null, capacidadmax int(3) not null);
+Query OK, 0 rows affected (0.34 sec)
+
+MariaDB [diplomado]> describe diplomado;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| iddiplomado    | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| nombredip      | varchar(20)     | NO   |     | NULL    |                |
+| descripciondop | varchar(100)    | NO   |     | NULL    |                |
+| costo          | int(9)          | NO   |     | NULL    |                |
+| capacidadmax   | int(3)          | NO   |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+MariaDB [diplomado]>
+
+MariaDB [diplomado]> create table mc(idmc int(8)unsigned primary key auto_increment, idcohorte int(8) not null, idmodulo int(8) not null, aula int(2) not null, fechaini date not null, fechafin date not null, idturno int(8) not null);
+Query OK, 0 rows affected (0.16 sec)
+
+MariaDB [diplomado]> describe mc;
++-----------+-----------------+------+-----+---------+----------------+
+| Field     | Type            | Null | Key | Default | Extra          |
++-----------+-----------------+------+-----+---------+----------------+
+| idmc      | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| idcohorte | int(8)          | NO   |     | NULL    |                |
+| idmodulo  | int(8)          | NO   |     | NULL    |                |
+| aula      | int(2)          | NO   |     | NULL    |                |
+| fechaini  | date            | NO   |     | NULL    |                |
+| fechafin  | date            | NO   |     | NULL    |                |
+| idturno   | int(8)          | NO   |     | NULL    |                |
++-----------+-----------------+------+-----+---------+----------------+
+7 rows in set (0.02 sec)
+
+MariaDB [diplomado]>
+
+MariaDB [diplomado]> create table modulo(idmodulo int(8)unsigned primary key auto_increment, nombremod varchar(20) not null, descripcionmod varchar(100) not null, iddiplomado int(8) not null);
+Query OK, 0 rows affected (0.29 sec)
+
+MariaDB [diplomado]> describe modulo;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| idmodulo       | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| nombremod      | varchar(20)     | NO   |     | NULL    |                |
+| descripcionmod | varchar(100)    | NO   |     | NULL    |                |
+| iddiplomado    | int(8)          | NO   |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+MariaDB [diplomado]>
+
+MariaDB [diplomado]> create table turno(idturno int(8)unsigned primary key auto_increment, descripciontur varchar(100) not null, horaini varchar(5) not null, hora fin varchar(5) not null);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fin varchar(5) not null)' at line 1
+MariaDB [diplomado]> create table turno(idturno int(8)unsigned primary key auto_increment, descripciontur varchar(100) not null, horaini varchar(5) not null, horafin varchar(5) not null);
+Query OK, 0 rows affected (0.18 sec)
+
+MariaDB [diplomado]> describe turno;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| idturno        | int(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| descripciontur | varchar(100)    | NO   |     | NULL    |                |
+| horaini        | varchar(5)      | NO   |     | NULL    |                |
+| horafin        | varchar(5)      | NO   |     | NULL    |                |
++----------------+-----------------+------+-----+---------+----------------+
+4 rows in set (0.03 sec)
+
+MariaDB [diplomado]>

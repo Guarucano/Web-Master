@@ -1,0 +1,76 @@
+PROYECTO FINAL BASE DE DATOS
+
+PREGUNTA 1: ¿Qué películas está proyectando el cine?.
+
+MariaDB [proyectofinal]> select * from pelicula;
++----------+--------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------+-----------------+-------------+----------+---------------+
+| cod_peli | nom_peli     | genero          | desrip_peli                                                                                                                                            | año  | pais       | idioma          | subtitulo   | duracion | clasificacion |
++----------+--------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------+-----------------+-------------+----------+---------------+
+|        1 | Corpse Bride | Fantasia,Romanc | Ambientada en un pueblecito europeo en el siglo XIX, esta película de animación fotograma a fotograma cuenta la historia de Victor (a quien pone voz J | 2005 | USA,UK     | Ingles, español | sub español | 77 min   | A             |
+|        2 | the Pacifier | Accion,Comedia, | Un marine americano debe proteger a cinco niños de un científico asesinado que trabajar en proyectos secretos del gobierno. Ahora, Shane, un Navy Seal | 2005 | Canada,USA | Ingles,Español  | Sub Español | 95min    | A             |
+|        3 | Steve Jobs   | Historia,Drama  | El biopic de Steve Jobs, que cuenta su aventura en la revolución de las tecnologías. Su pasión, su ingenio y el sacrificio para impulsar la era digita | 2015 | USA        | Ingles,Español  | Sub español | 122min   | B             |
++----------+--------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------+-----------------+-------------+----------+---------------+
+3 rows in set (0.07 sec)
+
+PREGUNTA 2: ¿A qué hora y en qué sala se está proyectando la pelicula "X"?.  (siendo "X" alguna película en especifico)
+MariaDB [proyectofinal]> select hora, num_sala, nom_peli from funcion join sala on funcion.num_sala=sala.num_sala join pelicula on funcion.cod_peli=pelicula.cod_peli where pelicula.cod_peli = 1;
++--------+-----------+--------------+
+| hora   | num_sala  | nom_peli     |
++--------+-----------+--------------+
+| 4:34pm | 1         | Corpse Bride |
++--------+-----------+--------------+
+1 row in set (0.04 sec)
+
+PREGUNTA 3:  Mostrar todos los clientes que tienen alguna compra.
+
+MariaDB [proyectofinal]> select nombre,apellido,compra from compra join cliente on compra.cedula=cliente.cedula where compra="si";
++------------+-----------+--------+
+| nombre     | apellido  | compra |
++------------+-----------+--------+
+| Miguel     | Guarucano | si     |
+| Rebeca     | Bracho    | si     |
+| Marco      | Guarucano | si     |
+| Mario      | Guarucano | si     |
+| Marianella | Guarucano | si     |
++------------+-----------+--------+
+5 rows in set (0.00 sec)
+
+PREGUNTA 4: ¿Qué clientes tienen Compras y para qué película?.
+
+MariaDB [proyectofinal]> select nombre, apellido, compra,nom_peli from compra join cliente on compra.cedula=cliente.cedula join pelicula on compra.cod_peli=pelicula.cod_peli where compra="si";
++------------+-----------+--------+--------------+
+| nombre     | apellido  | compra | nom_peli     |
++------------+-----------+--------+--------------+
+| Miguel     | Guarucano | si     | Corpse Bride |
+| Rebeca     | Bracho    | si     | the Pacifier |
+| Marco      | Guarucano | si     | Steve Jobs   |
+| Mario      | Guarucano | si     | Steve Jobs   |
+| Marianella | Guarucano | si     | Steve Jobs   |
++------------+-----------+--------+--------------+
+5 rows in set (0.01 sec)
+
+PREGUNTA 5:  Mostrar ticket de compra de un cliente "X".  (Implicaría: datos del cliente, película,hora,sala,la cantidad de entradas que compró, números de los asientos y el monto total a pagar).
+MariaDB [proyectofinal]> select nombre, apellido, nom_peli, cant_entradas, precio*cant_entradas,butaca,hora,num_sala from compra join cliente on compra.cedula=cliente.cedula join pelicula on compra.cod_peli=pelicula.cod_peli join sala on compra.num_sala=sala.num_sala join funcion on compra.cod_funcion=funcion.cod_funcion where nombre="Miguel";
++--------+-----------+--------------+---------------+----------------------+--------+--------+----------+
+| nombre | apellido  | nom_peli     | cant_entradas | precio*cant_entradas | butaca | hora   | num_sala |
++--------+-----------+--------------+---------------+----------------------+--------+--------+----------+
+| Miguel | Guarucano | Corpse Bride |             1 |                  600 | g24    | 4:34pm |        1 |
++--------+-----------+--------------+---------------+----------------------+--------+--------+----------+
+1 row in set, 1 warning (0.00 sec)
+
+Ejemplo del archivo a enviar:   (y así con cada pregunta)
+
+PREGUNTA 1:  ¿Qué películas está proyectando el cine?
+
+mysql> QUERY DE MYSQL;
+
++----------+--------------------+-----------------+----------------------------------------------------------------------+----------+---------------+-----------+------------+-----------------------+-------------+---------------------+
+| cod_peli | nom_peli           | tipo_cli        | descrip_cine                                                         | cod_cine | nom_cine      | rif_cine  | direc_cine | email_cine            | tlf_cine    | descrip_cine        |
++----------+--------------------+-----------------+----------------------------------------------------------------------+----------+---------------+-----------+------------+-----------------------+-------------+---------------------+
+|        1 | Avengers           | Ciencia Ficción | Cuando Tony Stark intenta impulsar un programa | 	  1 | Vamos al Cine | J-1234567 | Maracaibo  | vamosalcine@gmail.com | 0261-800000 | SoftwareReservaCine |
+|        2 | Rápido y Furioso 7 | Acción          | Después de asesinar a Owen Shaw y sus secuaces en Londres  |        1 | Vamos al Cine | J-1234567 | Maracaibo  | vamosalcine@gmail.com | 0261-800000 | SoftwareReservaCine |
+|        3 | Tomorrowland  | Ciencia Ficción | Frank y Casey viajan a un lugar conocido como Tomorrowland |   	  1 | Vamos al Cine | J-1234567 | Maracaibo  | vamosalcine@gmail.com | 0261-800000 | SoftwareReservaCine |
+|        4 | | Jurassic World| Ciencia Ficción |Veintidós años después del fracaso del primer parque, la Isla Nublar |   	  1 | Vamos al Cine | J-1234567 | Maracaibo  | vamosalcine@gmail.com | 0261-800000 | SoftwareReservaCine |
++----------+--------------------+-----------------+----------------------------------------------------------------------+----------+---------------+-----------+------------+-----------------------+-------------+---------------------+
+4 rows in set (0.00 sec)
+

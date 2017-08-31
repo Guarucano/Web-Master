@@ -1,0 +1,63 @@
+#select * from NOMBRET1 
+join NOMBRET2 
+on NOMBRET1.CAMPO=NOMBRET2.CAMPO;
+
+select * from datospersonales 
+join perfil 
+on datospersonales.idperfil=perfil.idperfil;
+
+select cedula, nombre, apellido, descripcionper from datospersonales 
+join perfil 
+on datospersonales.idperfil=perfil.idperfil;
+
+select * from diplomado 
+join modulo 
+on diplomado.iddiplomado=modulo.iddiplomado;
+
+select nombredip, nombremod, descripcionmod from diplomado 
+join modulo 
+on diplomado.iddiplomado=modulo.iddiplomado;
+
+select * from cohorte 
+join diplomado 
+on cohorte.iddiplomado=diplomado.iddiplomado;
+
+select nombredip, nombrecoh, periodo, costo, capacidadmax  from diplomado 
+join cohorte 
+on diplomado.iddiplomado=cohorte.iddiplomado;
+
+select * from mc 
+join turno 
+on mc.idturno=turno.idturno;
+
+select idcohorte, idmodulo, aula, descripciontur, horaini, horafin from mc 
+join turno 
+on mc.idturno=turno.idturno;
+
+select * from inscritoen 
+join datospersonales 
+on inscritoen.iddatosper=datospersonales.iddatosper;
+
+select cedula, nombre, apellido, iddiplomado, idcohorte from inscritoen 
+join datospersonales 
+on inscritoen.iddatosper=datospersonales.iddatosper;
+
+select cedula, nombre, apellido, idmc, notafinal from datospersonales 
+join notas 
+on datospersonales.iddatosper=notas.iddatosper;
+
+select * from mc 
+join cohorte 
+on mc.idcohorte=cohorte.idcohorte;
+
+select nombrecoh, idmodulo, fechaini, fechafin, aula from mc 
+join cohorte 
+on mc.idcohorte=cohorte.idcohorte;
+
+select nombrecoh, idmodulo, fechaini, fechafin, aula from mc 
+join cohorte 
+on mc.idcohorte=cohorte.idcohorte where current_date() >= fechaini and current_date() <= fechafin;
+
+
+
+

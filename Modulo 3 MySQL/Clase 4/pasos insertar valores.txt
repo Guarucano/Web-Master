@@ -1,0 +1,3 @@
+- para insertar 
+MariaDB [diplomado]> insert into perfil (idperfil,descripcionper) values (null,
+"Coordinador");      

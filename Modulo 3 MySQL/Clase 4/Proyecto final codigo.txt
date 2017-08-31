@@ -1,0 +1,113 @@
+MariaDB [proyectofinal]> create table pelicula (cod_peli int(8) unsigned primary key auto_increment, nom_peli varchar(30) not null, genero varchar(15) not null, desrip_peli varchar(150) not null, año int(4) not null, pais varchar(15) not null, idioma varchar (15) not null, fecha date not null, subtitulo varchar(15) not null, duracion varchar(15) not null, clasificacion varchar(1) not null);
+Query OK, 0 rows affected (0.29 sec)
+
+MariaDB [proyectofinal]> create table cine (cod_peli int(8) unsigned primary key auto_increment, nom_cine varchar(30) not null, rif_cine int(10) not null, dir_cine varchar(50) not null, email_cine varchar(25) not null, telf_cine varchar(11) not null, descrip_cine varchar (50) not null, cant_salas int(2) not null);
+Query OK, 0 rows affected (0.17 sec)
+
+create table cliente(cedula int(8) unsigned primary key auto_increment, nombre varchar(20) not null, apellido varchar(20) not null, direccion varchar(50) not null, telf_cliente varchar(11) not null, fecha_nac date not null);
+Query OK, 0 rows affected (1.40 sec)
+
+MariaDB [proyectofinal]> create table sala(num_sala int(2) unsigned primary key auto_increment, capacidad int(3) not null, tipo_sala varchar(10) not null, butaca varchar(4) not null);
+Query OK, 0 rows affected (0.18 sec)
+
+MariaDB [proyectofinal]> create table funcion(cod_funcion int(8) unsigned primary key auto_increment, fecha date not null, hora varchar(10) not null, precio varchar(10) not null, cod_peli int(8) not null, num_sala int(8) not null);
+Query OK, 0 rows affected (0.17 sec)
+
+MariaDB [proyectofinal]> create table compra(cod_compra int(8) unsigned primary key auto_increment, fecha date not null, hora varchar(10) not null, cod_cine int(8) not null, cedula int(8) not null, cod_funcion int(8) not null, cod_peli int(8) not null, num_sala int(2) not null);
+Query OK, 0 rows affected (0.23 sec)
+
+MariaDB [proyectofinal]> alter table compra add column compra varchar(2) not null after num_sala;
+Query OK, 0 rows affected (0.41 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(19546948, "Miguel","Guarucano","Urb. La Floresta", "04126581188","1990/07/03");
+Query OK, 1 row affected (0.30 sec)
+
+MariaDB [proyectofinal]> select * from cliente;
++----------+--------+-----------+------------------+--------------+------------+
+| cedula   | nombre | apellido  | direccion        | telf_cliente | fecha_nac  |
++----------+--------+-----------+------------------+--------------+------------+
+| 19546948 | Miguel | Guarucano | Urb. La Floresta | 04126581188  | 1990-07-03 |
++----------+--------+-----------+------------------+--------------+------------+
+1 row in set (0.00 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(23457240, "Mario","Guarucano","Urb. La Floresta", "04166619317","1993/04/12");
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(23457239, "Marco","Guarucano","Urb. La Floresta", "04246996038","1993/04/12");
+Query OK, 1 row affected (0.04 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(18287166, "Marianella","Guarucano","Urb. La Floresta", "04246098676","1986/05/06");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(22057256, "Rebeca","Bracho","Santa Fe", "04246205603","1992/09/21");
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(5821252, "Ebelio","Guarucano","Urb. La Floresta", "04146585455","1958/04/10");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into cliente values(5752669, "Yuraima","Velasco","Urb. La Floresta", "04144582125","1960/12/15");
+Query OK, 1 row affected (0.03 sec)
+
+
+MariaDB [proyectofinal]> insert into cine values(null, "cines unidos","f-5858585","av goajira","cines.unidos@gmail.com","02617585858","buen cine, pero lejos",15);
+Query OK, 1 row affected, 1 warning (0.04 sec)
+
+MariaDB [proyectofinal]> insert into cine values(null, "cinex","f-7858596","galerias","cinex@gmail.com","02617587565","un poco feo pero queda cerca",20);
+Query OK, 1 row affected, 1 warning (0.06 sec)
+
+MariaDB [proyectofinal]> insert into pelicula values(null, "Corpse Bride","Fantasia,Romance,Animacion,Musica","Ambientada en un pueblecito europeo en el siglo XIX, esta película de animación fotograma a fotograma cuenta la historia de Victor (a quien pone voz Johnny Depp), un joven que es llevado de repente al infierno, donde se casa con una misteriosa Novia Cadáver (con la voz de Helena Bonham Carter), mientras que su verdadera novia, Victoria (a quien pone voz Emily Watson) espera en el mundo de los vivos. A pesar de que la tierra de los muertos resulta ser más colorista que su estricta educación victoriana, Victor aprende que no hay nada en este mundo, ni en el siguiente, que pueda separarle de su único y verdadero amor. Es un cuento de optimismo, romance y una ?otra vida? muy animada, contada con el clásico estilo Tim Burton.",2005,"USA,UK","Ingles, español","2000/09/03","sub español","77 min","A");
+Query OK, 1 row affected, 2 warnings (0.12 sec)
+
+MariaDB [proyectofinal]> alter table pelicula drop fecha;
+Query OK, 0 rows affected (0.64 sec)
+
+MariaDB [proyectofinal]> insert into pelicula values (null,"the Pacifier","Accion,Comedia,Familia","Un marine americano debe proteger a cinco niños de un científico asesinado que trabajar en proyectos secretos del gobierno. Ahora, Shane, un Navy Seal acostumbrado a peligrosas misiones de rescate, debe enfrentarse a dos trabajos completamente incompatibles: luchar contra los malos mientras cuida de la casa y se hace cargo de las revoltosas criaturas; además de intentar vencer al enemigo, Shane debe enfrentarse a la rebelde adolescente Zoe, y sus hermanos Seth, Lulu, Peter y el bebé Tyler.","2005","Canada,USA","Ingles,Español","Sub Español","95min","A");
+Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+MariaDB [proyectofinal]> insert into pelicula values (null,"Steve Jobs","Historia,Drama","El biopic de Steve Jobs, que cuenta su aventura en la revolución de las tecnologías. Su pasión, su ingenio y el sacrificio para impulsar la era digital que llegó a afectar a su vida familiar y a su estado de salud. Centrado en la época en la que lanzó los tres productos icónicos de Apple.","2015","USA","Ingles,Español","Sub español","122min","B");
+Query OK, 1 row affected, 1 warning (0.03 sec)
+
+MariaDB [proyectofinal]> insert into sala values (null,100,"normal","g24");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into sala values (null,80,"normal","a20");
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [proyectofinal]> insert into sala values (null,80,"3D","b9");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into sala values (null,40,"Premium","a5");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into sala values (null,80,"3D","g9");
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [proyectofinal]> insert into sala values (null,40,"Premium","a4");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into funcion values (null,"2016/02/05","4:34pm","600bs",1,1);
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into funcion values (null,"2016/02/06","6:00pm","600bs",2,2);
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [proyectofinal]> insert into funcion values (null,"2016/02/07","9:00pm","800Bs",3,4);
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [proyectofinal]> insert into compra values (null,"2016/02/05","5:24pm",1,19546948,1,1,1,"si");
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [proyectofinal]> insert into compra values (null,"2016/02/06","2:30pm",1,22057256,2,2,2,"si");
+Query OK, 1 row affected (0.04 sec)
+
+MariaDB [proyectofinal]> insert into compra values (null,"2016/02/07","4:30pm",2,23457239,2,3,3,"si");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into compra values (null,"2016/02/07","4:30pm",2,23457240,2,3,3,"si");
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [proyectofinal]> insert into compra values (null,"2016/02/08","6:30pm",1,18287166,1,3,6,"si");
+Query OK, 1 row affected (0.03 sec)select
+
+MariaDB [proyectofinal]> alter table compra add column cant_entradas int(2) after compra;
+Query OK, 0 rows affected (0.63 sec)
